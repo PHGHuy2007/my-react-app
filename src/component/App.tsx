@@ -8,18 +8,14 @@ interface User {
 }
 
 function App() {
-    // Bước 2: Khai báo các State
-    // <User[]> báo cho TypeScript biết đây là một mảng các User
     const [users, setUsers] = useState<User[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
-    // Bước 3: Hàm gọi API
+
     const fetchUsers = () => {
         setIsLoading(true);
         setError(null);
-
-        // 1. Khởi tạo đối tượng XMLHttpRequest
         const xhr = new XMLHttpRequest();
 
         // 2. Cấu hình yêu cầu: Phương thức GET và URL

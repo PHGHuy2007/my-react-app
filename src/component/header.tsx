@@ -6,11 +6,8 @@ const Header = () => {
     const [name] = useState('T2512E');
     const [age] = useState(0);
     const [email] = useState('phanhoanggiahuy2007@gmail.com');
-    const [countNumber, setCountNumber] = useState(0);
     const [text, setText] = useState("");
-    function demo() {
-        setCountNumber(countNumber + 1);
-    }
+
     useEffect(() => {
         document.title = text || 'T2512E';
     })
